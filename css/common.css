@@ -106,6 +106,19 @@ label {
 }
 
 /* header */
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  backdrop-filter: blur(10px);
+}
+/* 휠 내릴 시 숨기기*/
+#header.hide {
+  top: -120px;
+}
+
 #header .inner {
   /* width: 1800px; */
   width: 93.75%;
@@ -125,6 +138,7 @@ nav {
 .menu {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
 }
 .gnb {
@@ -135,7 +149,7 @@ nav {
 }
 .gnb li a {
   display: block;
-  padding: 1rem 3rem;
+  padding: 2rem 3rem;
   font-weight: 700;
 }
 .gnb li.active a {
