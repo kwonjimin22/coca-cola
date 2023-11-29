@@ -1,0 +1,299 @@
+@charset 'utf-8';
+
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css');
+
+:root {
+  --main-color: #ff0000;
+  --text-color: #ffffff;
+  --text-color-dark: #989898;
+  --line-color: #989898;
+  --line-color-op30: rgba(152, 152, 152, 0.3);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font: 2rem/1.5 'Pretendard', sans-serif;
+  background: #000;
+  color: var(--text-color);
+  word-break: keep-all;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  text-decoration: none;
+  color: var(--main-color);
+}
+
+hr,
+.hidden {
+  position: absolute;
+  margin: -1px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+::selection {
+  background: var(--main-color);
+  color: #fff;
+}
+
+img {
+  max-width: 100%;
+}
+
+button,
+label {
+  cursor: pointer;
+}
+
+/* 말줄임표 */
+.cut-text {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* 더 알아보기 버튼(쓸라고 만든거) */
+.btn-more {
+  color: var(--main-color);
+  font-weight: 500;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.btn-more::after {
+  content: '';
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  background: url(../img/ico-more.svg) no-repeat 50%;
+}
+.btn-sb-more.btn-more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--text-color);
+  width: 16rem;
+  height: 4rem;
+  background: var(--main-color);
+  border-radius: 60px;
+  margin-top: 3rem;
+  transition: 0.6s;
+}
+.btn-sb-more.btn-more::after {
+  background-image: url(../img/ico-more-w.svg);
+}
+
+/* inner */
+.inner {
+  width: 130rem;
+  margin: 0 auto;
+  /* background: rgba(0, 183, 255, 0.192); */
+}
+
+/* header */
+#header .inner {
+  /* width: 1800px; */
+  width: 93.75%;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 11.2rem;
+}
+.logo a {
+  display: block;
+  width: 20rem;
+  height: 9.8rem;
+  background: url(../img/logo.svg) no-repeat 50% / 70%;
+}
+.menu {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.gnb {
+  display: flex;
+  margin-right: auto;
+  /* margin-left: 12.4rem; */
+  /* margin-left: 6.8889%; */
+}
+.gnb li a {
+  display: block;
+  padding: 1rem 3rem;
+  font-weight: 700;
+}
+.gnb li.active a {
+  color: var(--main-color);
+}
+.sns-list {
+  display: flex;
+  gap: 3rem;
+}
+.sns-list li a {
+  display: block;
+  min-width: 4rem;
+  min-height: 4rem;
+  background: no-repeat 50% / contain;
+}
+.sns-list li:nth-child(1) a {
+  background-image: url(../img/sns-youtube.svg);
+}
+.sns-list li:nth-child(2) a {
+  background-image: url(../img/sns-twitter.svg);
+}
+.sns-list li:nth-child(3) a {
+  background-image: url(../img/sns-facebook.svg);
+}
+.sns-list li:nth-child(4) a {
+  background-image: url(../img/sns-instagram.svg);
+}
+
+/* footer */
+
+#footer {
+  padding: 4.8rem 8.6rem;
+  border-top: 1px solid var(--line-color-op30);
+}
+#footer .inner {
+  width: 100%;
+}
+.foot-con {
+  display: flex;
+  justify-content: space-between;
+}
+.foot-logo {
+  width: 18rem;
+  /* height: 10rem; */
+}
+.foot-text {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  font-weight: 300;
+}
+.foot-text .foot-links {
+  display: flex;
+  align-items: end;
+  margin-top: 1.8rem;
+}
+.foot-text .foot-links li {
+  display: flex;
+  align-items: center;
+}
+.foot-text .foot-links li a {
+  padding: 0 1.5rem;
+}
+.foot-text .foot-links li::after {
+  content: '';
+  display: block;
+  width: 0.5rem;
+  height: 0.5rem;
+  background: var(--text-color-dark);
+  border-radius: 50%;
+}
+.foot-text .foot-links li:last-child a {
+  padding-right: 0;
+}
+.foot-text .foot-links li:last-child:after {
+  display: none;
+}
+.foot-text strong {
+  font-size: 1.6rem;
+  margin-top: 0.6rem;
+}
+
+@media (max-width: 1300px) {
+  header .inner,
+  .inner {
+    width: 94.140625%;
+  }
+}
+
+@media (max-width: 1100px) {
+  .gnb {
+    margin-left: 1.6666%;
+  }
+  .gnb li a {
+    padding: 1rem 1.5rem;
+  }
+}
+
+/* 추가분기점 */
+@media (max-width: 912px) {
+  /* 헤더 */
+  .logo {
+    margin: 0 auto;
+  }
+  .logo a {
+    background-size: 60%;
+  }
+  .gnb {
+    display: none;
+  }
+  #header .sns-list {
+    display: none;
+  }
+  .menu {
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    background: url(../img/ico-hb.svg) no-repeat 50% /90%;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+  }
+
+  /* 푸터 */
+  /* #footer {
+    padding: 4.8rem 0;
+  }
+  .foot-con {
+    flex-direction: column;
+    align-items: center;
+  }
+  .sns-list li a {
+    width: 6.4102vw;
+    height: 6.4102vw;
+  }
+  .foot-text {
+    margin-top: 2rem;
+    align-items: center;
+  }
+  .foot-text .foot-links li a {
+    font-size: 1.8rem;
+  }
+  .foot-text strong {
+    font-size: 1.8rem;
+  } */
+
+  #footer {
+    padding: 4.8rem 0;
+  }
+  .foot-con {
+    flex-direction: column;
+    align-items: center;
+  }
+  .foot-text {
+    margin-top: 2rem;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+}

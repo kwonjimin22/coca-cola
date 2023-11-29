@@ -1,0 +1,578 @@
+@charset 'utf-8';
+
+/* 서브용 헤더 설정*/
+#header {
+  position: fixed;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  z-index: 10;
+}
+
+/* 공통 */
+/* 공통 : 섹션 */
+section {
+  /* border: 1px solid #f0f; */
+  overflow: hidden; /* 이건 임시! 자꾸 미작업 영역 아이템이 침투해서 */
+  height: 100vh;
+  /* 서브메뉴를 메뉴아래로 */
+  position: relative;
+}
+/* 공통 : 서브메뉴 */
+.sub-menu {
+  display: flex;
+  justify-content: center;
+  /* 서브메뉴를 메뉴아래로 */
+  padding: 11.2rem 0 0;
+}
+.sub-menu li a {
+  display: block;
+  font-weight: 500;
+  padding: 2rem;
+}
+.sub-menu li.active a {
+  color: var(--main-color);
+}
+
+/* 공통 : con wrap(내용들을 모니터 기준 가운데 정렬용) */
+.con-wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  /* border: 1px solid #ff0; */
+}
+.story .con-wrap {
+  width: 86.6146%;
+}
+.managpent-philosophy .con-wrap {
+  width: 67.7083%;
+}
+
+/* 공통 : 버튼 크기 수정 */
+.btn-more {
+  gap: 1.5rem;
+}
+.btn-sb-more.btn-more {
+  width: 22rem;
+  height: 6rem;
+  font-size: 2rem;
+}
+
+/* 시작 */
+/* management philosophy */
+.mp-con {
+  display: flex;
+  justify-content: space-between;
+}
+.mp-con li {
+  /* width: 31rem; */
+  width: 23.8461%;
+  min-width: 22rem;
+}
+.mp-con li a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.8rem;
+}
+.mp-con li a figure {
+  /* width: 31rem; */
+  /* height: 29rem; */
+  width: 100%;
+  aspect-ratio: 1/0.9354;
+  border-radius: 6rem;
+  overflow: hidden;
+}
+.mp-con li a figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.mp-con li a strong {
+  font-weight: 900;
+  font-size: 3rem;
+  text-align: center;
+}
+
+/* history */
+.h-con {
+  display: flex;
+  align-items: center;
+  /* gap: 10rem; */
+}
+.timeline {
+  display: flex;
+  width: 65.6249%;
+}
+/* history: year */
+.year {
+  /* background: #ff0; */
+  width: 43.492%;
+  font-weight: 800;
+  font-size: 5rem;
+  color: var(--text-color-dark);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.year a.active {
+  color: var(--main-color);
+  font-size: 10rem;
+}
+/* history: h-bar */
+.h-bar {
+  /* background: #f0f; */
+  width: 56.5079%;
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+  position: relative;
+}
+.h-bar li {
+  font-size: 1.9rem;
+  font-weight: 500;
+  color: var(--text-color-dark);
+  display: flex;
+  gap: 2rem;
+}
+.h-bar li p {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.h-bar li p.date {
+  width: 10rem;
+  flex-shrink: 0;
+}
+.h-bar li p.content {
+  width: 85.9155%;
+}
+.h-bar li p.date::after {
+  position: relative;
+  z-index: 1;
+  content: '';
+  display: block;
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  background: var(--text-color-dark);
+}
+.h-bar::after {
+  /* 세로선 */
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 9.5rem;
+  height: 100%;
+  width: 0.1rem;
+  background: var(--line-color);
+}
+/* history: h-bar, 선택된 날짜 표시 */
+.h-bar li.active {
+  color: var(--main-color);
+}
+.h-bar li.active p.date::after {
+  background: var(--main-color);
+}
+
+/* history: 참고사진부분 */
+.additional-images {
+  /* background: #0ff; */
+  width: 34.375%;
+  height: 70rem;
+  position: relative;
+}
+.additional-images figure {
+  height: 100%;
+  width: 100%;
+}
+.additional-images::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 0.5));
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.additional-images figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* sustainable-business */
+.sb-wrap {
+  display: flex;
+  margin-top: 18.2rem;
+  height: calc(100vh - 18.2rem);
+}
+
+/* sustainable-business, 이미지 */
+.sb-list li figure,
+.sb-main-con figure {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.sb-list li figure img,
+.sb-main-con figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.sb-list li figure::after,
+.sb-main-con figure::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.7) 10%, rgba(0, 0, 0, 0.4));
+}
+
+/* sustainable-business, info */
+.sb-list .sb-list-info,
+.sb-main-con .sb-main-info {
+  position: absolute;
+  text-align: right;
+  top: 50%;
+  transform: translateY(-50%);
+  /* right: 8.6rem; */
+  /* right: 8.9583%; */
+  right: 12%;
+  /* width: 55.6rem; */
+  /* width: 57.9166%; */
+  width: 50%;
+}
+.sb-list-info strong,
+.sb-main-info strong {
+  font-weight: 800;
+  line-height: 1.2;
+  font-size: 6rem;
+}
+.sb-list-info p,
+.sb-main-info p {
+  margin-top: 3rem;
+  font-weight: 500;
+  font-size: 2rem;
+  color: var(--text-color-dark);
+}
+.sb-list-info p + p,
+.sb-main-info p + p {
+  margin-top: 4rem;
+}
+.sb-list-info p i,
+.sb-main-info p i {
+  color: var(--text-color);
+  font-weight: 700;
+}
+.sustainable-business .btn-sb-more.btn-more {
+  margin-left: auto;
+  margin-top: 4rem;
+}
+
+/* sustainable-business, 선택된 콘텐츠 - 확장 */
+.sb-main-con {
+  width: 70%;
+  position: relative;
+}
+
+/* sustainable-business,콘텐츠 리스트 */
+.sb-list {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+.sb-list li {
+  height: 25%;
+  position: relative;
+}
+.sb-list .sb-list-info {
+  width: 70%;
+  /* right: 8.6rem; */
+  right: 8.9583%;
+}
+.sb-list-info p,
+.sb-list-info .btn-sb-more.btn-more {
+  display: none;
+}
+.sb-list-info strong {
+  font-weight: 700;
+  font-size: 3rem;
+}
+.sb-list li figure::after {
+  background: rgba(0, 0, 0, 0.7);
+}
+.sb-list li.active figure::after {
+  background: rgba(255, 0, 0, 0.6);
+}
+
+/* story */
+.s-list {
+  margin-top: 9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.s-list li {
+  display: flex;
+  align-items: center;
+  /* gap: 7.2rem; */
+  gap: 4.3347%;
+}
+.s-list li figure {
+  width: 47.8rem;
+  height: 33rem;
+  overflow: hidden;
+}
+.s-list li figure img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.s-list li .s-info {
+  width: 48rem;
+}
+.s-info strong {
+  font-weight: 700;
+  font-size: 4rem;
+}
+.s-info p {
+  margin-top: 1.8rem;
+  font-weight: 400;
+  font-size: 1.8rem;
+  color: var(--text-color-dark);
+}
+/* 버튼은 common에서 정의 */
+.story .btn-sb-more.btn-more {
+  margin-top: 4.5rem;
+}
+
+/* 짝수는 반대로 */
+.s-list li:nth-child(even) {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+.story li:nth-child(even) .s-info .btn-sb-more.btn-more {
+  margin-left: auto;
+}
+
+/* 반응형 시작 */
+/* 태블릿 디자인 */
+@media (max-width: 1100px) {
+  /* management philosophy */
+  .mp-con {
+    margin-top: 18rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  .mp-con li {
+    min-width: 21rem;
+  }
+  .mp-con li a {
+    gap: 1rem;
+  }
+  .mp-con li a strong {
+    font-size: 2.2rem;
+  }
+
+  /* history */
+  .h-con {
+    margin-top: 18.2rem;
+    flex-direction: column;
+    gap: 10rem;
+  }
+  .timeline {
+    width: 100%;
+  }
+  .year {
+    width: 40%;
+  }
+  .h-bar {
+    width: 60%;
+  }
+  .additional-images {
+    width: 100%;
+  }
+  .additional-images::before {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 0.5));
+  }
+  .additional-images {
+    height: 52rem;
+  }
+  /* sustainable business */
+  .sb-main-con .sb-main-info {
+    width: 58%;
+  }
+
+  /* story */
+  .s-list {
+    gap: 4rem;
+  }
+  .s-list li,
+  .s-list li:nth-child(even) {
+    flex-direction: column;
+    text-align: center;
+  }
+  .story .btn-sb-more.btn-more {
+    margin: 4.5rem auto;
+  }
+  .s-list li figure {
+    height: 20rem;
+  }
+  .s-info strong {
+  }
+}
+/* 추가 분기점 */
+@media (max-width: 912px) {
+  .additional-images {
+  }
+}
+/* 추가 분기점 */
+@media (max-width: 600px) {
+}
+/* 모바일 디자인 */
+@media (max-width: 480px) {
+  /* 모바일 버전, 버튼 */
+  .btn-sb-more.btn-more {
+    width: 16rem;
+    height: 4rem;
+    font-size: 1.8rem;
+  }
+
+  /* managpent-philosophy */
+  .sub-menu li a {
+    font-size: 1.8rem;
+  }
+  .mp-con {
+    margin-top: 18rem;
+  }
+  .mp-con li {
+    min-width: 16rem;
+  }
+  .mp-con li a strong {
+    font-weight: 700;
+    font-size: 2rem;
+  }
+
+  /* history */
+  .history .con-wrap {
+    width: 80%;
+  }
+  .h-con {
+    margin-top: 18rem;
+    flex-direction: column;
+  }
+  .timeline {
+    flex-direction: column;
+  }
+  .year {
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .year a.active {
+    font-size: 4rem;
+  }
+  .year {
+    width: 100%;
+    font-size: 2rem;
+  }
+  .h-bar {
+    margin-top: 3rem;
+    width: 100%;
+    gap: 8rem;
+  }
+  .h-bar li p {
+    font-size: 1.6rem;
+  }
+  .h-bar li p.content {
+    width: 100%;
+  }
+
+  .additional-images {
+    display: none;
+  }
+
+  /* sustainable-business */
+  .sb-wrap {
+    flex-direction: column;
+  }
+
+  .sb-main-con {
+    height: 60%;
+    width: 100%;
+  }
+  .sb-list .sb-list-info,
+  .sb-main-con .sb-main-info {
+    width: 80%;
+  }
+  .sb-list-info strong,
+  .sb-main-info strong {
+    font-size: 3.8rem;
+  }
+  .sb-list-info p,
+  .sb-main-info p {
+    font-size: 1.6rem;
+  }
+  .sb-list-info p + p,
+  .sb-main-info p + p {
+    display: none;
+  }
+
+  .sb-list {
+    flex-direction: column;
+    width: 100%;
+    height: 40%;
+  }
+  .sb-list li {
+    width: 100%;
+    height: 25%;
+  }
+  .sb-list .sb-list-info {
+    text-align: right;
+  }
+  .sb-list-info strong {
+    font-size: 2rem;
+  }
+
+  .sb-list li.active figure::after {
+    background: rgb(255, 0, 0, 0.8);
+  }
+  .sb-main-con figure::after {
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.7) 10%, rgba(0, 0, 0, 0.6));
+  }
+
+  /* story */
+  .s-list {
+    margin-top: 20rem;
+    gap: 4rem;
+  }
+  .s-list li {
+    gap: 0;
+  }
+  .s-list li figure {
+    height: 14rem;
+    width: 100%;
+  }
+  .s-list li .s-info {
+    width: 100%;
+  }
+  .s-info strong {
+    font-size: 2.4rem;
+  }
+  .s-info p {
+    margin-top: 0.4rem;
+    font-size: 1.4rem;
+    /* display: none; */
+  }
+  .story .btn-sb-more.btn-more {
+    margin: 2rem auto;
+  }
+}

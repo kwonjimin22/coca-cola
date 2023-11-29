@@ -1,0 +1,744 @@
+@charset 'utf-8';
+
+/* 메인용 헤더 추가 설정*/
+/* #header {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+} */
+
+/* 공통 사용*/
+h3 {
+  font-size: 4.4rem;
+  font-weight: 700;
+}
+
+/* 시작 */
+.visual {
+  background: url(../img/visual-bg.png) no-repeat 50% / cover;
+  height: 100vh;
+  position: relative;
+}
+
+.visual .visual-wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1080px;
+  display: flex;
+  align-items: center;
+  /* border: 1px solid #ff0; */
+}
+
+.visual-title {
+  /* border: 1px solid #f00; */
+  width: 50%;
+  text-align: right;
+}
+.visual-title p {
+  font-weight: 500;
+  font-size: 3rem;
+}
+.visual-title h2 {
+  font-weight: 700;
+  font-size: 8rem;
+  margin-top: 0.8rem;
+  line-height: 1;
+}
+.visual-title a {
+  font-weight: 500;
+  font-size: 2.2rem;
+  height: 6rem;
+  width: 25rem;
+  border-radius: 60px;
+  color: var(--text-color);
+  background: var(--main-color);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3.5rem;
+  /* margin-top: 14.8397%; */
+}
+
+.visual-pic {
+  width: 50%;
+  height: 100%;
+  /* border: 1px solid #00f; */
+}
+.visual-pic figure {
+  width: 40rem;
+  margin: 0 auto;
+}
+/* key-content */
+.key-content {
+  padding: 2rem 0 16.9rem;
+}
+
+.key-content h3 {
+  text-align: center;
+}
+
+.key-con-list {
+  margin-top: 9.8rem;
+  display: flex;
+  gap: 2rem;
+}
+.key-con-list li {
+  width: 32.3077%;
+}
+.key-con-list li a {
+  font-weight: 700;
+  font-size: 3.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.4rem;
+}
+.key-con-list li figure {
+  width: 100%;
+  /* height: 34rem; */
+  aspect-ratio: 1/0.8095238095238095;
+  /* border-radius: 100px; */
+  border-radius: 23.8095%;
+  overflow: hidden;
+  position: relative;
+}
+.key-con-list li figure::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.key-con-list li figure img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.key-con-list li strong {
+  font-weight: 700;
+  font-size: 3.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.key-con-list li strong::after {
+  content: '';
+  display: block;
+  width: 3rem;
+  height: 3rem;
+  background: url(../img/ico-more.svg) no-repeat 50% / contain;
+}
+
+/* procudt */
+.procudt {
+  padding: 16.9rem 0 15rem;
+}
+
+.p-wrap {
+  display: flex;
+  gap: 11rem;
+}
+
+/* .btn-more common에서 적어둠 */
+
+.p-btn {
+  display: flex;
+  gap: 16.2rem;
+  margin-top: 19.8rem;
+}
+.btn-prev {
+  width: 5.2rem;
+  height: 22rem;
+  background: url(../img/p-btn-prev.svg) no-repeat 50%;
+}
+.btn-next {
+  width: 5.2rem;
+  height: 22rem;
+  background: url(../img/p-btn-next.svg) no-repeat 50%;
+}
+
+.p-list {
+  display: flex;
+  gap: 2rem;
+}
+.p-list li {
+  width: 42rem;
+  /* height: 49.2rem; */
+  aspect-ratio: 1/1.171;
+  background: var(--line-color-op30);
+  border-radius: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.p-list li.active {
+  width: 64rem;
+  /* height: 49.2rem; */
+  aspect-ratio: 1/0.76875;
+  flex-direction: row;
+}
+
+.p-name {
+  font-weight: 700;
+  font-size: 2.4rem;
+  margin-top: 1rem;
+}
+li.active .p-name {
+  display: none;
+}
+.p-info {
+  display: none;
+  /* width: 26.4rem; */
+  width: 41.25%;
+  min-width: 15.6rem;
+  margin-left: 8.2rem;
+  position: relative;
+  z-index: 1;
+}
+.p-list li.active .p-info {
+  display: block;
+}
+.p-info strong {
+  font-size: 4.8rem;
+  font-weight: 700;
+}
+.p-info strong {
+  display: block !important;
+}
+.p-info p {
+  font-weight: 400;
+  margin-top: 1.8rem;
+}
+.p-info .btn-buy {
+  color: var(--text-color);
+  font-size: 1.8rem;
+  font-weight: 700;
+  display: block;
+  width: 21.8rem;
+  height: 5.6rem;
+  border: 1px solid #fff;
+  border-radius: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2.8rem;
+}
+.p-info .btn-buy:hover {
+  border: 1px solid var(--main-color);
+  background: rgba(255, 0, 0, 0.28);
+}
+.p-list li figure {
+  /* width: 30rem; */
+  /* height: 33rem; */
+  width: 71.4285%;
+  height: 67.0731%;
+}
+
+.p-list li figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* performance */
+.performance {
+  padding: 15rem 0 9.6rem;
+}
+.pf-list {
+  margin-top: 9.8rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 7rem;
+  width: 100%;
+}
+
+.pf-list li {
+  width: 49.2308%;
+}
+
+.pf-list a {
+  display: flex;
+  gap: 2rem;
+}
+.pf-info {
+  width: 100%;
+}
+.pf-info strong {
+  display: flex;
+  gap: 1rem;
+  align-items: end;
+  font-weight: 700;
+  font-size: 2rem;
+  color: var(--line-color);
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--line-color-op30);
+}
+.pf-info strong i {
+  font-size: 8rem;
+  color: var(--main-color);
+  line-height: 0.8;
+}
+
+.pf-info p {
+  padding: 2.4rem 0 3rem 0;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+/* .btn-more common에서 적어둠 */
+
+/* sustainable-business */
+.sustainable-business {
+  padding: 9.6rem 0 14rem;
+}
+
+.sb-list {
+  margin-top: 7.8rem;
+  display: flex;
+  gap: 2rem;
+}
+.sb-list li {
+  position: relative;
+  /* width: 42rem; */
+  width: 32.3076%;
+  height: 62rem;
+  /* aspect-ratio: 1/1.476190476190476; */
+  border-radius: 6rem;
+  overflow: hidden;
+}
+.sb-list li figure {
+  width: 100%;
+  height: 100%;
+}
+.sb-list li::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 30%, rgba(0, 0, 0, 0.5));
+  opacity: 0.8;
+  transition: 0.4s;
+}
+.sb-list li figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.sb-title {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  width: 100%;
+  padding: 4.2rem;
+}
+.sb-title strong {
+  font-weight: 700;
+  font-size: 3rem;
+}
+.sb-list li:hover::after {
+  opacity: 1;
+}
+/* .btn-more common에서 적어둠 */
+.sb-list li:hover .btn-sb-more.btn-more {
+  transform: scale(110%);
+}
+
+/* new-event */
+.new-event {
+  padding: 14rem 0;
+  background: url(../img/new-event-bg.png) no-repeat 0 0;
+}
+
+.new-event-con {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 86rem;
+  margin: 0 auto;
+}
+
+.new-event-con figure {
+  width: 33rem;
+  width: 35%;
+}
+
+.new-event-con .ne-title {
+  width: 530px;
+  width: 60%;
+}
+.ne-title p {
+  font-weight: 700;
+  font-size: 3rem;
+}
+.ne-title p + p {
+  font-weight: 700;
+  font-size: 4.8rem;
+}
+.ne-title p em {
+  color: var(--main-color);
+}
+
+/* .btn-more common에서 적어둠 */
+.ne-title .btn-sb-more.btn-more {
+  width: 22rem;
+  height: 5.2rem;
+}
+
+/* news */
+.news {
+  padding: 6.5rem 0 15.6rem;
+}
+
+.news-wrap {
+  margin-top: 6rem;
+}
+
+.news-sns > li {
+  width: 100%;
+  height: 10rem;
+  background: var(--line-color-op30);
+  border: 1px solid var(--line-color-op30);
+  border-radius: 60px;
+  padding: 2.4rem 8.5rem;
+}
+.news-sns > li:hover {
+  border: 1px solid var(--main-color);
+  background: rgba(255, 0, 0, 0.28);
+}
+.news-sns > li + li {
+  margin-top: 1rem;
+}
+.news-sns > li a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.news-sns > li .ico {
+  width: 5.6rem;
+  height: 5.2rem;
+}
+.n-text-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 76.2411%;
+  gap: 3rem;
+}
+.news-sns .hashtag {
+  font-weight: 700;
+  color: var(--text-color);
+  display: flex;
+  gap: 1rem;
+  overflow: hidden;
+  width: 400px;
+}
+.news-sns .hashtag + strong {
+  font-weight: 500;
+  font-size: 2.2rem;
+  color: var(--text-color);
+  overflow: hidden;
+}
+
+.news-sns > li p {
+  font-weight: 500;
+  font-size: 1.6rem;
+  color: var(--line-color);
+}
+
+.news-youtube {
+  margin-top: 4rem;
+  display: flex;
+  gap: 2rem;
+}
+
+.news-youtube li {
+  width: 49.2308%;
+  display: flex;
+  justify-content: center;
+}
+
+.news-youtube li a {
+  width: 100%;
+}
+
+.news-youtube li figure {
+  width: 100%;
+  /* width: 64rem; */
+  /* height: 36.6rem; */
+  border-radius: 9.375%;
+  overflow: hidden;
+}
+
+.news-youtube li figure img {
+  width: 100%;
+  /* height: 100%; */
+  /* object-fit: cover; */
+}
+
+.news-youtube li p {
+  text-align: center;
+  font-weight: 500;
+  font-size: 2.6rem;
+  margin-top: 2.2rem;
+}
+@media (max-width: 1100px) {
+  /* 시작 */
+  .visual .visual-wrap {
+    flex-direction: column;
+    width: 80%;
+    gap: 3rem;
+  }
+
+  .visual-title {
+    width: 100%;
+    text-align: center;
+  }
+
+  .visual-pic {
+    width: 100%;
+    min-width: 40rem;
+  }
+
+  .visual-pic figure {
+    width: 100%;
+    max-width: 72.4rem;
+    display: flex;
+    justify-content: center;
+  }
+  .visual-pic figure img {
+    width: 40%;
+  }
+
+  /* key-content */
+  .key-con-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 8rem;
+  }
+  .key-con-list li {
+    position: relative;
+    width: 100%;
+  }
+  .key-con-list li figure {
+    /* aspect-ratio: 1/0.2593; */
+    height: 20rem;
+    border-radius: 6rem;
+  }
+  .key-con-list li figure::after {
+    background: rgba(0, 0, 0, 0.6);
+  }
+  .key-con-list li strong {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  /* product */
+  .p-info strong {
+    font-size: 5.8593vw;
+  }
+  .p-info p {
+    font-size: 2.5vw;
+  }
+  .p-wrap {
+    position: relative;
+  }
+  .p-con {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .p-wrap {
+    flex-direction: column;
+  }
+  .p-list li {
+    display: none;
+    /* padding: 8.2rem; */
+    /* padding: 12rem; */
+    padding: 10.75%;
+  }
+  .p-info {
+    margin-left: 0;
+  }
+  .p-list li.active {
+    margin: 0 auto;
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    position: relative;
+    gap: 5rem;
+  }
+  .p-list li.active figure {
+    width: 15rem;
+    min-width: 10rem;
+    height: 100%;
+    /* height: 33rem; */
+  }
+  .p-info {
+    margin-left: 0;
+  }
+
+  .p-btn {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    justify-content: space-between;
+    margin-top: 0;
+  }
+  .p-info .btn-buy {
+    width: 100%;
+  }
+
+  /* performance */
+  .pf-list {
+    flex-direction: column;
+    align-items: center;
+  }
+  .performance h3 {
+    text-align: center;
+  }
+
+  /* sustainable-business */
+  .sustainable-business {
+    margin-left: 2.929%;
+  }
+  .sustainable-business .inner {
+    width: 100%;
+  }
+  .sb-list {
+    overflow-x: auto;
+  }
+  .sb-list li {
+    width: 570px;
+    height: 830px;
+    flex-shrink: 0;
+  }
+
+  /* new-event */
+  .new-event-con {
+    width: 80%;
+    /* border: 1px solid #fff; */
+  }
+  .ne-title p {
+    font-size: 2.9296vw;
+  }
+  .ne-title p + p {
+    font-size: 4.6875vw;
+  }
+  .ne-title .btn-sb-more.btn-more {
+    width: 23vw;
+    aspect-ratio: 1/0.29;
+  }
+}
+/* 추가분기점 */
+@media (max-width: 912px) {
+  .news-sns > li {
+    padding: 1.3rem 3rem;
+    /* height: 5.4rem; */
+  }
+  .news-sns .hashtag {
+    font-size: 1.2rem;
+  }
+  .n-text-wrap {
+    display: block;
+  }
+  .news-sns .hashtag + strong {
+    font-size: 1.6rem;
+  }
+  .news-sns > li p {
+    font-size: 1.2rem;
+  }
+}
+/* 추가분기점 */
+@media (max-width: 600px) {
+  /* performance */
+  .pf-list li {
+    width: 80%;
+  }
+
+  .sb-list li {
+    width: 480px;
+  }
+}
+
+@media (max-width: 480px) {
+  .visual-title p {
+    font-size: 1.8rem;
+  }
+  .visual-title h2 {
+    font-size: 4.6rem;
+  }
+  .visual-title a {
+    width: 150px;
+  }
+
+  /* key-con-list */
+  /* product */
+  .p-list li.active {
+    gap: 0;
+  }
+  /* performance */
+  .pf-list li {
+    width: 90%;
+  }
+  /* sustainable-business */
+  .sb-list li {
+    width: 28.9rem;
+    height: 50.6rem;
+  }
+
+  /* new-event */
+  .new-event {
+    padding: 0;
+    overflow: hidden;
+    height: 30rem;
+  }
+  .new-event figure {
+    width: 15rem;
+    height: 23rem;
+  }
+
+  .ne-title .btn-sb-more.btn-more {
+    /* font-size: 1.2rem; */
+    font-size: 3vw;
+    height: 3rem;
+  }
+
+  /* news */
+  .news-sns > li {
+    height: 5.4rem;
+  }
+  .news-youtube {
+    flex-direction: column;
+  }
+  .news-youtube li {
+    width: 100%;
+  }
+  .news-sns > li .ico {
+    width: 4.6rem;
+    height: 4.2rem;
+  }
+  .n-text-wrap {
+    width: 60%;
+  }
+}
