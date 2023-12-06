@@ -367,7 +367,7 @@ section {
 @media (max-width: 1100px) {
   /* management philosophy */
   .mp-con {
-    margin-top: 18rem;
+    margin-top: 26rem;
     flex-direction: column;
     align-items: center;
     gap: 2rem;
@@ -393,6 +393,10 @@ section {
   }
   .year {
     width: 40%;
+    font-size: 6rem;
+  }
+  .year a.active {
+    font-size: 8rem;
   }
   .h-bar {
     width: 60%;
@@ -428,17 +432,21 @@ section {
   }
   .s-info strong {
   }
-}
-/* 추가 분기점 */
-@media (max-width: 912px) {
   .additional-images {
+    display: none;
   }
 }
 /* 추가 분기점 */
-@media (max-width: 600px) {
+@media (max-width: 912px) {
+  .sb-list-info strong {
+    font-size: 2rem;
+  }
+  .sb-main-info strong {
+    font-size: 3rem;
+  }
 }
 /* 모바일 디자인 */
-@media (max-width: 480px) {
+@media (max-width: 690px) {
   /* 모바일 버전, 버튼 */
   .btn-sb-more.btn-more {
     width: 16rem;
@@ -476,13 +484,11 @@ section {
     flex-direction: row;
     justify-content: center;
     gap: 2rem;
+    width: 100%;
+    font-size: 2rem;
   }
   .year a.active {
     font-size: 4rem;
-  }
-  .year {
-    width: 100%;
-    font-size: 2rem;
   }
   .h-bar {
     margin-top: 3rem;
