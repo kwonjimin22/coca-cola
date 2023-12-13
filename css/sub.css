@@ -430,10 +430,29 @@ section {
   .s-list li figure {
     height: 20rem;
   }
-  .s-info strong {
-  }
   .additional-images {
     display: none;
+  }
+  /* story */
+  .s-list {
+    margin-top: 20rem;
+    gap: 4rem;
+  }
+  .s-list li {
+    gap: 0;
+  }
+  .s-list li figure {
+    height: 14rem;
+    width: 100%;
+  }
+  .s-list li .s-info {
+    width: 100%;
+  }
+
+  .s-info p {
+    margin-top: 0.4rem;
+    font-size: 1.4rem;
+    /* display: none; */
   }
 }
 /* 추가 분기점 */
@@ -442,17 +461,20 @@ section {
     font-size: 2rem;
   }
   .sb-main-info strong {
+    font-size: 4rem;
+  }
+  .s-info strong {
     font-size: 3rem;
   }
 }
 /* 모바일 디자인 */
 @media (max-width: 690px) {
   /* 모바일 버전, 버튼 */
-  .btn-sb-more.btn-more {
+  /* .btn-sb-more.btn-more {
     width: 16rem;
     height: 4rem;
     font-size: 1.8rem;
-  }
+  } */
 
   /* managpent-philosophy */
   .sub-menu li a {
@@ -519,8 +541,7 @@ section {
   .sb-main-con .sb-main-info {
     width: 80%;
   }
-  .sb-list-info strong,
-  .sb-main-info strong {
+  .sb-list-info strong {
     font-size: 3.8rem;
   }
   .sb-list-info p,
@@ -553,32 +574,5 @@ section {
   }
   .sb-main-con figure::after {
     background: linear-gradient(to left, rgba(0, 0, 0, 0.7) 10%, rgba(0, 0, 0, 0.6));
-  }
-
-  /* story */
-  .s-list {
-    margin-top: 20rem;
-    gap: 4rem;
-  }
-  .s-list li {
-    gap: 0;
-  }
-  .s-list li figure {
-    height: 14rem;
-    width: 100%;
-  }
-  .s-list li .s-info {
-    width: 100%;
-  }
-  .s-info strong {
-    font-size: 2.4rem;
-  }
-  .s-info p {
-    margin-top: 0.4rem;
-    font-size: 1.4rem;
-    /* display: none; */
-  }
-  .story .btn-sb-more.btn-more {
-    margin: 2rem auto;
   }
 }

@@ -149,6 +149,11 @@ h3 {
   gap: 11rem;
 }
 
+.p-title {
+  width: 266px;
+  background: #ff5;
+}
+
 /* .btn-more common에서 적어둠 */
 
 .p-btn {
@@ -170,6 +175,8 @@ h3 {
 .p-list {
   display: flex;
   gap: 2rem;
+  border: 1px solid #fff;
+  overflow: visible !important;
 }
 .p-list li {
   width: 42rem;
@@ -182,7 +189,7 @@ h3 {
   justify-content: center;
   align-items: center;
 }
-.p-list li.active {
+.p-list li.swiper-slide-active {
   width: 64rem;
   /* height: 49.2rem; */
   aspect-ratio: 1/0.76875;
@@ -194,7 +201,7 @@ h3 {
   font-size: 2.4rem;
   margin-top: 1rem;
 }
-li.active .p-name {
+li.swiper-slide-active .p-name {
   display: none;
 }
 .p-info {
@@ -206,7 +213,7 @@ li.active .p-name {
   position: relative;
   z-index: 1;
 }
-.p-list li.active .p-info {
+.p-list li.swiper-slide-active .p-info {
   display: block;
 }
 .p-info strong {
